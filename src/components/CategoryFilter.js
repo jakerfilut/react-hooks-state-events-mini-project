@@ -1,12 +1,39 @@
 import React from "react";
 
-function CategoryFilter() {
+function CategoryFilter({listOfCategories, currentCategory, settingCategory}) {
+
+const categoryButtons = listOfCategories.map((category) => {
+const className = (category === currentCategory ? "selected" : null)
+return(
+<button onClick={() => settingCategory(category)}
+key={category}
+className={className}
+  >{category}</button>
+)})
+
   return (
     <div className="categories">
       <h5>Category filters</h5>
-      {/* render <button> elements for each category here */}
+      {categoryButtons}
     </div>
   );
 }
 
 export default CategoryFilter;
+
+
+
+
+
+// import React from "react";
+
+// function CategoryFilter({listOfCategories}) {
+//   return (
+//     <div className="categories">
+//       <h5>Category filters</h5>
+//       {/* render <button> elements for each category here */}
+//     </div>
+//   );
+// }
+
+// export default CategoryFilter;
