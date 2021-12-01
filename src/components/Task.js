@@ -1,23 +1,69 @@
 import React from "react";
 
-function Task({text, category, handleDelete}) {
+function Task({text, category, handleDeleteButton}) {
 
-function deleteText(){
-  // console.log(text)
-  handleDelete(text)
+function deleteButton(){
+  handleDeleteButton(text)
 }
-
 
   return (
     <div className="task">
       <div className="label">{category}</div>
       <div className="text">{text}</div>
-      <button onClick={deleteText} className="delete">X</button>
+      <button onClick={deleteButton} className="delete">X</button>
     </div>
   );
 }
 
 export default Task;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+
+// function Task({text, category, handleDelete}) {
+
+// function deleteText(){
+//   // console.log(text)
+//   handleDelete(text)
+// }
+
+
+//   return (
+//     <div className="task">
+//       <div className="label">{category}</div>
+//       <div className="text">{text}</div>
+//       <button onClick={deleteText} className="delete">X</button>
+//     </div>
+//   );
+// }
+
+// export default Task;
 
 
 
